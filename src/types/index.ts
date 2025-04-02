@@ -27,3 +27,11 @@ export interface ListItemCompProps {
 export interface AddListItemProps {
     card: CardProps;
 }
+
+export interface ConfirmModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    onConfirm: () => void;
+    title: string;
+    message: string;
+}

@@ -24,6 +24,7 @@ const AddListItem = ({ card }: AddListItemProps) => {
             },
         });
 
+        setShowListInput(false);
         setListItemText("");
     };
 
@@ -51,7 +52,12 @@ const AddListItem = ({ card }: AddListItemProps) => {
 
             <Button
                 onClick={() => setShowListInput(true)}
-                className="bg-green-800 hover:bg-green-900"
+                className={`bg-green-800 ${
+                    showListInput
+                        ? "disabled:cursor-not-allowed"
+                        : " hover:bg-green-900"
+                }`}
+                disabled={!!showListInput}
             >
                 Add a list item
             </Button>

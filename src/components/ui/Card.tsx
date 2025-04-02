@@ -11,7 +11,6 @@ const Card = ({ card }: CardCompProps) => {
     const titleInputRef = useRef<HTMLInputElement | null>(null);
 
     const updateTitle = () => {
-        console.log(titleInputRef.current?.value);
         dispatch({
             type: UPDATE_CARD_TITLE,
             payload: {
